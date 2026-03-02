@@ -49,7 +49,7 @@ public class UserServiceImpl implements UserService {
         for (User user : users) {
             userDto.add(UserMapper.MAPPER.toUserDtoData(user));
         }
-        return List.of();
+        return userDto;
     }
 
     @Override
