@@ -57,4 +57,21 @@ public class UserController {
                 "data", result
         ));
     }
+
+    @PutMapping(
+            path = "/api/users/{id}",
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public ResponseEntity<Map<String, Object>> UpdateUser(
+            @PathVariable("id") String id,
+            @RequestBody UserAddRequest request
+    ) {
+        UserDto result = userService.updateUser(id, request);
+
+        return ResponseEntity.status(HttpStatus.OK).body(Map.of(
+                "status", "success",
+                "data", result
+        ));
+    }
 }
