@@ -101,11 +101,11 @@ Response Body (success) :
 Response Body (failed) :
 
 ```json
-
-Hasil tampilan
-<img width="1919" height="1151" alt="image" src="https://github.com/user-attachments/assets/097828b7-0b33-49e5-a3ba-87398f564be7" />
-
 {
   "error": "User not found"
 }
 ```
+
+
+Hasil tampilan
+<img width="1919" height="1151" alt="image" src="https://github.com/user-attachments/assets/097828b7-0b33-49e5-a3ba-87398f564be7" />
