@@ -74,4 +74,16 @@ public class UserController {
                 "data", result
         ));
     }
+
+    @DeleteMapping(
+            path = "/api/users/{id}",
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public ResponseEntity<Map<String, Object>> DeleteUser(@PathVariable("id") String id) {
+        userService.DeleteUser(id);
+
+        return ResponseEntity.status(HttpStatus.OK).body(Map.of(
+                "status", "success delete user with id " + id
+        ));
+    }
 }
